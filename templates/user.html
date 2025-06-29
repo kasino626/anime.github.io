@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユーザーページ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="top-header">
+            <div class="user-section">
+                <div class="user-avatar">
+                    <img src="{{ url_for('static', filename=user.icon) }}" alt="ユーザーアイコン">
+                </div>
+                <div class="user-info">
+                    <h1 class="user-title">{{ user.username }}</h1>
+                </div>
+            </div>
+            <div class="gift-section">
+                <div class="gift-box">
+                    <span class="gift-text">🎁</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
